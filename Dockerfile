@@ -6,4 +6,6 @@ RUN yum install -y httpd && \
 
 ADD assets/00-mirror.conf /etc/httpd/conf.d/00-mirror.conf
 
+EXPOSE 80
+
 CMD ["/usr/sbin/httpd", "-DFOREGROUND"]
